@@ -46,7 +46,7 @@ services:
     image: n8nio/n8n:${N8N_IMAGE_TAG}
     restart: unless-stopped
     depends_on:
-      postgres:
+      n8n_postgres:
         condition: service_healthy
       redis:
         condition: service_healthy
@@ -90,7 +90,7 @@ services:
     restart: unless-stopped
     command: worker
     depends_on:
-      postgres:
+      n8n_postgres:
         condition: service_healthy
       redis:
         condition: service_healthy
