@@ -52,6 +52,7 @@ services:
         condition: service_healthy
     environment:
       - NODE_ENV=production
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 
       - N8N_HOST=${N8N_HOST}
       - N8N_PORT=${N8N_PORT}
